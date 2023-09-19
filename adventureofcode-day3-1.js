@@ -1,13 +1,3 @@
-// Day 3: Perfectly Spherical Houses in a Vacuum
-// http://adventofcode.com/day/3
-// Part 1
-//  Santa is delivering presents to an infinite two-dimensional grid of houses
-/**
- * How many houses receive at least one present?
- * 
- * 
- */
-
 
 const input = `^>v<`
 
