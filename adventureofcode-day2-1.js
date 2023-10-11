@@ -1,5 +1,3 @@
-
-
 const input = `4x23x21
 22x29x19
 11x4x11
@@ -12,6 +10,7 @@ function calculateWrappingPaper(boxes){
 
     for(let i = 0; i < boxes.length; i++){
         const arrayInput = boxes[i].split('x').map(Number);
+        console.log(arrayInput)
         let l = arrayInput[0];
         let w = arrayInput[1];
         let h = arrayInput[2];
