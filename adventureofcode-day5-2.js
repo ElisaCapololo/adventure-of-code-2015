@@ -1,33 +1,29 @@
 const input = `sszojmmrrkwuftyv
 isaljhemltsdzlum
 fujcyucsrxgatisb
-aaa`
+qiqqlmcgnhzparyg
+oijbmduquhfactbc
+`
 
 const boxStrings = input.split('\n')
 
 const boxes = [...boxStrings]
 
-//Function to know the number of vowels in a given string
-const countVoewls = (str) => {
-  return (str.match(/[aeiou]/ig)||[]).length;
-}
-
 //Function to know the number of double letter
-const doubleLetter = (str) => {
-  const reg = /(\w)\1/
+const pairDoubleLetter = (str) => {
+  const reg = /(\w\w).*\1/
   return reg.test(str)
 }
 
 //Function to know the number of string that have ab|cd|pq|xy
-const disallowedString = (str) =>{
-  const reg = /(ab|cd|pq|xy)/
+const oneLetterRepeats = (str) =>{
+  const reg = /(\w)(\w)\1/
   return reg.test(str)
 }
 
-
 let totalNiceStrings = 0;
 boxes.forEach((element) =>{
-  if(countVoewls(element) >= 3 && doubleLetter(element) && !disallowedString(element)){
+  if(pairDoubleLetter(element) && oneLetterRepeats(element)){
     totalNiceStrings++;
   }
 })
